@@ -5,7 +5,7 @@ const app = express();
 
 app.use(express.json());
 
-app.use(categoriesRoutes);
+app.use('/categories', categoriesRoutes);
 
 app.post('/courses', (request, response) => {
     const { name } = request.body;
